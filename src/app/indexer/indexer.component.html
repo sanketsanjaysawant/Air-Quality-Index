@@ -1,0 +1,56 @@
+<body>
+    <form class="form-inline">
+        <div class="parent">
+            <div id="child one">
+
+                <label class="col-lg-12">Enter no. of records:&nbsp;
+                    <input class="form-control mr-sm-2" type="number" placeholder="No. Of Records" [(ngModel)]="limit" name="limit"
+                        (change)="onChange($event)"></label>
+            </div>
+
+            <div>
+                <label class="col-lg-12">Search here:&nbsp;
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="term"
+                        aria-label="Search" [(ngModel)]="term"></label>
+            </div>
+            <!-- <div><label style="padding-top:10px ;" id="lastupdatedon"><u>Data last updated on</u>: <b>{{lastupdatedon}}</b></label></div> -->
+        </div>
+    </form>
+
+    <div class="col-sm-12 container table-striped table-responsive-lg">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Station</th>
+                    <!-- <th>Last Updated</th> -->
+                    <th>Pollutant ID</th>
+                    <th>Minimum Pollutant</th>
+                    <th>Maximum Pollutant</th>
+                    <th>Average Pollutant</th>
+                    <th>Pollutant Unit</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let data of arrBiirds | filter:term">
+                    <td>{{data.id}}</td>
+                    <td>{{data.country}}</td>
+                    <td>{{data.state}}</td>
+                    <td>{{data.city}}</td>
+                    <td>{{data.station}}</td>
+                    <!--    <td>{{data.last_update}}</td> -->
+                    <td>{{data.pollutant_id}}</td>
+                    <td>{{data.pollutant_min}}</td>
+                    <td>{{data.pollutant_max}}</td>
+                    <td>{{data.pollutant_avg}}</td>
+                    <td>{{data.pollutant_unit}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>

@@ -1,0 +1,7 @@
+{
+    "/api": {
+
+           "target": "https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key=579b464db66ec23bdd000001d7714733d718466b50dccb7002f16bfe&format=json&offset=0&limit=10-time-air-quality-index-various-locations/api#/Resource/get_resource_3b01bcb8_0b14_4abf_b6f2_c1bfd384ba69",
+           "secure": false
+    }
+}
